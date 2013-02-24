@@ -45,7 +45,7 @@ module BitTorrent
     #
     # Adds a given file to the metainfo.
     #
-    # file_path :: file name to add, and optionally path
+    # file_path :: file name to add, and optional path in the metainfo
     #
     def <<( file_path )
       if file_path.is_a?( Array )
@@ -76,7 +76,7 @@ module BitTorrent
     end
 
     #
-    # Flushs and calls IO#flush for given _io_.
+    # Flushes and calls IO#flush for given _io_.
     #
     def flush
       if @carry_over
